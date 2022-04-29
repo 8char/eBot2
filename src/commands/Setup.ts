@@ -10,6 +10,7 @@ export const Setup: Command = {
             .setTitle(":warning: Create the channel inside of a *text channel*!")
             .setColor("#cc3300")
 
+        //Make sure that the command is being executed in a server channel so that the bot can setup the appropriate channels.
         if (!(interaction.channel?.type === "GUILD_TEXT")) return await interaction.followUp({ ephemeral: true, embeds: [ embed ] });
         
         embed.setColor("#00FF00").setTitle("Hety!")
