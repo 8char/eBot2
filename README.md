@@ -12,4 +12,4 @@ To install the bot simply clone the repository to a computer and then run `yarn 
 You can then start the bot using `yarn start` or `npm run start`.
 
 ## Want to contribute?
-Great, simply make a commit and I'll have a look at it. If you have any forther questions you can contact me on dicord, *Atlas#6666*.
+Great, simply make a commit and I'll have a look at it. If you have any further questions you can contact me on dicord, *Atlas#6666*.
