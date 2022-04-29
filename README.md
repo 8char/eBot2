@@ -1,7 +1,7 @@
 # eBot2 (The continuation of eBot)
 💵 A discord bot used to sell services/products.
 
-##Features
+## Features
 **Commands:**
 - `/ping` - Gets the Client & API Latency for eBot.
 - `/setup` - Sets up all of the neccessary channels so that you can begin selling your products. *W.I.P*
