@@ -1,4 +1,4 @@
-import { Client, ClientOptions, Intents } from "discord.js";
+import { Client, Intents } from "discord.js";
 require("dotenv").config();
 import eventLoader from "./EventLoader";
 

@@ -3,8 +3,13 @@ import { Command } from "../Command";
 
 // A recursive function which will compare the value provided against a set of ranges which will then return an item from an array in that certain spot compared to what range it is in.
 const recursiveRangeSymbol = (checkValue: number, difference: number, symbols: any[], step: number=1): any => {
-    if (checkValue>=difference*symbols.length) return symbols[symbols.length-1]
-    if (checkValue<=difference*step) return symbols[step-1];
+    if (checkValue<=0)
+        return symbols[0];
+    if (checkValue>=difference*symbols.length)
+        return symbols[symbols.length-1];
+    if (checkValue<=difference*step)
+        return symbols[step-1];
+
     return recursiveRangeSymbol(checkValue, difference, symbols, step+1)
 }
 
@@ -29,7 +34,7 @@ export const Ping: Command = {
             },
             {
                 name: "API Latency",
-                value: `${recursiveRangeSymbol(apiLatency, 100, ["🟡", "🟠", "🔴"])} *\` ${apiLatency} ms\`*`,
+                value: `${recursiveRangeSymbol(apiLatency, 100, ["🟡", "🟠", "🔴"])} *\`${apiLatency} ms\`*`,
                 inline: true
             }])
 
