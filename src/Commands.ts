@@ -1,5 +1,5 @@
 import { Command } from "./Command";
-const fs = require("node:fs");
+import fs from "fs";
 
 const Commands: Command[] = [];
 const commandFiles = fs.readdirSync(`${__dirname}/commands/`)

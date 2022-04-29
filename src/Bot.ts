@@ -1,10 +1,9 @@
 import { Client, ClientOptions, Intents } from "discord.js";
 require("dotenv").config();
-//Import the listeners so that they can be instanciated below (TODO: Create an Event Handler)
-import interactionCreate from './listeners/interactionCreate';
-import ready from "./listeners/ready";
+import eventLoader from "./EventLoader";
 
-console.log("Bot is starting...");
+console.log("⌛ Bot is starting...");
+console.log(`🐛 Debug level: ${process.env.NODE_ENV?.toLocaleUpperCase() || "NONE"}`)
 
 //Enables the required intents for the bot.
 const client = new Client({
@@ -15,9 +14,8 @@ const client = new Client({
     ],
 });
 
-//Loading/instanciating the events so that they can be emitted once triggered.
-ready(client);
-interactionCreate(client);
+eventLoader(client);
+
 
 //Finally login to the bot using its token.
 client.login(process.env.CLIENT_TOKEN);
