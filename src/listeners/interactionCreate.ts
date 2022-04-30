@@ -1,10 +1,29 @@
-import { BaseCommandInteraction, Client, DiscordAPIError, Interaction, Message, MessageEmbed } from "discord.js";
+import { BaseCommandInteraction, Client, Interaction, MessageEmbed } from "discord.js";
 import Commands from "../Commands";
+import DebugLogger from "../utils/debug";
 
 export default (client: Client): void => {
     client.on("interactionCreate", async (interaction: Interaction) => {
         if (interaction.isCommand() || interaction.isContextMenu()) {
             await handleSlashCommand(client, interaction);
+            new DebugLogger().log(process.env.NODE_ENV, "A command has just been executed!", [
+                {
+                    title: "Command",
+                    description: interaction.commandName
+                },
+                {
+                    title: "ChannelID",
+                    description: interaction.channel?.id
+                },
+                {
+                    title: "UserID",
+                    description: interaction.user.id
+                },
+                {
+                    title: "Timestamp",
+                    description: interaction.createdAt
+                }
+            ]);
         }
     });
 };
