@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "production": "set NODE_ENV=production&&yarn build&&node dist/Bot.js",
-    "development": "set NODE_ENV=development&&ts-node src/Bot.ts"
+    "production": "set NODE_ENV=PRODUCTION&&yarn build&&node dist/Bot.js",
+    "development": "set NODE_ENV=DEVELOPMENT&&ts-node src/Bot.ts"
   },
   "keywords": [],
   "author": "",
