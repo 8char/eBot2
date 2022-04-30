@@ -6,9 +6,11 @@ A discord bot used to sell services/products.
 
 **Commands:**
 
-- `/ping` - Gets the Client & API Latency for eBot.
-- `/setup` - Sets up all of the neccessary channels so that you can begin selling your products. *W.I.P*
-- `/package` - Sets up a package for you that you can then sell. *W.I.P*
+| Command | What does it do? |
+| ---- | ---- |
+| `/ping` | Gets the Client & API Latency for eBot. |
+| `/setup` | Sets up all of the neccessary channels so that you can begin selling your products. *W.I.P* |
+| `/package` | Sets up a package for you that you can then sell. *W.I.P* |
 
 ## 🤖 Installation
 
@@ -22,6 +24,14 @@ OWNER=[YOUR_CLIENT_ID]
 ```
 
 You can then start the bot using `yarn development` or `yarn production`. Each mode will differ, especially in the ammount of logging it makes to certain channels. More documentation on this will be written at a later date when it gets implemented.
+
+## 🏠 Enfiorment Differences
+
+| Environment | Logs Commands | Logs Upstarts | Warns for config errors |
+| --- | :---: | :---: | :---: |
+| DEVELOPMENT | ✔️ | ✔️ | ✔️ |
+| PRODUCTION | ❌ | ✔️ | ❌ |
+| NONE | ❌ | ✔️ | ❌ |
 
 ## 🏆 Want to contribute?
 
